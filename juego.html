@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Juegos - Centro Infantil Mundo Mágico</title>
+    <meta name="description" content="Desafío de preguntas de Mundo Mágico: responde 5 preguntas y gana 100 puntos por acierto.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧸</text></svg>">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-contenido">
+            <div class="logo">
+                <h1>🧸 Mundo Mágico</h1>
+                <p>Centro Infantil para mentes brillantes +13</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">🏠 Inicio</a></li>
+                    <li><a href="nosotros.html">👥 Nosotros</a></li>
+                    <li><a href="juego.html" class="activo">🎮 Juegos</a></li>
+                    <li><a href="ubicacion.html">📍 Ubicación</a></li>
+                    <li><a href="contacto.html">📞 Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="juego-container">
+        <div class="pantalla-inicio" id="pantallaInicio">
+            <h2>🎯 ¡Desafío de Preguntas!</h2>
+            <p>Responde 5 preguntas y demuestra cuánto sabes.</p>
+            <p>¡Cada respuesta correcta vale 100 puntos!</p>
+            <button class="btn-principal" onclick="iniciarJuego()">🚀 Comenzar</button>
+        </div>
+
+        <div class="pantalla-juego oculto" id="pantallaJuego">
+            <div class="info-juego">
+                <span id="contadorPregunta">Pregunta 1/5</span>
+                <span id="puntaje">Puntaje: 0</span>
+            </div>
+            <div class="barra-progreso">
+                <div class="progreso" id="progreso"></div>
+            </div>
+            <h2 id="pregunta"></h2>
+            <div class="opciones" id="opciones"></div>
+            <button class="btn-principal oculto" id="btnSiguiente" onclick="siguientePregunta()">➡️ Siguiente</button>
+        </div>
+
+        <div class="pantalla-final oculto" id="pantallaFinal">
+            <h2>🎉 ¡Juego Terminado!</h2>
+            <p>Tu puntaje final es:</p>
+            <div class="puntaje-final" id="puntajeFinal">0</div>
+            <p id="mensajeFinal"></p>
+            <button class="btn-principal" onclick="reiniciarJuego()">🔄 Jugar de Nuevo</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Centro Infantil Mundo Mágico - Proyecto de Servidores Web</p>
+        <div class="redes">📘 📷 🐦 ▶️</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
